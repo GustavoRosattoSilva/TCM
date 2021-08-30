@@ -2,7 +2,7 @@ h1 = float(input("Digite o h do Fluido quente:\n"))
 h2 = float(input("Digite o h do Fluido frio:\n"))
 temp1 = float(input("Digite a temperatura do Fluido quente:\n"))
 temp2 = float(input("Digite o temperatura do Fluido frio:\n"))
-n = int(input("Digite de materiais da parede:\n"))
+n = int(input("Digite o numero de materiais da parede:\n"))
 k = []
 l = []
 rcont = []
@@ -47,6 +47,7 @@ for x in range(0,2*n):
 	temperatura.append(temperatura[len(temperatura)-1] - resis[x]*q)
 
 temperatura.append(temp2)
-print(resis)
 print('fluxo igual: ' + str(q))
-print(temperatura)
+for i in range(0,len(temperatura)):
+	j = i + 1
+	print ('Temperatura ' + str(j) + ': ' + str(temperatura[i]))
